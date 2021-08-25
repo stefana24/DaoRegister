@@ -13,5 +13,6 @@ public class LoginSteps {
         headerPage.clickOnAccount();
         headerPage.clickOnALinkFromAccount("Log In");
         loginPage.logIn();
+        //assert
     }
 }

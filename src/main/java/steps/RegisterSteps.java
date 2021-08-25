@@ -34,11 +34,14 @@ public class RegisterSteps {
 
     @Step
     public void registerUser(User user){
-        System.out.println(user);
         registerPage.fillUserDetails(user);
         registerPage.clickOnRegisterBtn();
         Assert.assertEquals(registerPage.getRegistrationMsg(), MessageConstants.registrationMsg);
         userDao.saveUser(user);
+        // SerenitySessionUtils.saveObjectInSerenitySessionList(SerenityKeyConstants.REGISTER_USERS_LIST,user);
+
+        System.out.println(userDao.getAllUsers());
+        System.out.println(userDao.getUserByEmail(user.getEmail()));
 
     }
 

@@ -68,8 +68,4 @@ public class User {
         return firstName.equals(user.firstName) && middleName.equals(user.middleName) && lastName.equals(user.lastName) && email.equals(user.email) && password.equals(user.password);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstName, middleName, lastName, email, password);
-    }
 }
